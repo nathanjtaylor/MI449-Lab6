@@ -3,22 +3,21 @@ layout: layout.liquid
 title: Random Names
 ---
 
-<div x-data="{ names: [
-                'Judy',
-                'Mary',
-                'Yolanda',
-                'Jackson',
-                'Jalen',
-                'Damion',
-                'Randy',
-                'Oz',
-                'Misty',
-                'Xander']
-                }">
+<div x-data="{names:['Judy','Mary','Yolanda','Jackson','Jalen',
+                        'Damion','Randy','Oz','Misty','Xander'],
 
+                randomName: 'Generate a Random Name!',
 
-    <h1>Generate a Random Name!</h1>
-    <button>Generate</button>
-    
+                randomizeName() {
+                    this.randomName = this.names[Math.floor(Math.random() * 10)]
+                }
+                        }">
+
+    <h1 x-text="randomName"></h1>
+    <button @click="randomizeName()">Generate</button>
 
 </div>
+
+<!--
+
+-->
