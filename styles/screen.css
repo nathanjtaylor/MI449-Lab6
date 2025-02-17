@@ -6,10 +6,26 @@ body {
     text-align: center;
 }
 
+div {
+    background-color: #3b4056;
+    padding: 30px;
+    border-radius: 3px;
+}
+
+h1 {
+    font-size: 120px;
+}
+
 button {
     width: 100px;
     height: 50px;
     border-radius: 15px;
-    color
+    background-color: #0c3f60;
+    color: #EAE8FF;
+    font-weight: bold;
+}
+button:hover{
+    background-color: #0e4970;
+    cursor: pointer;
 }
 
